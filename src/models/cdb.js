@@ -1,16 +1,18 @@
 class Cdb {
-    constructor() { }
+    constructor(i) { 
+    	this.i = i/100;
+    }
 
     setAplicacaoInicial(number) {
-
+    	this.aplicacaoInicial = number;
     }
 
     setDias(number) {
-
+    	this.dias = number;
     }
 
     getRendimentoBruto() {
-        return 13.15
+        return parseFloat((this.aplicacaoInicial * this. i * this.dias/365).toFixed(2));
     }
 }
 
