@@ -16,5 +16,13 @@ describe('Rendimento bruto', function() {
       aplicacaoCdb.setDias(420);
       assert.equal(aplicacaoCdb.getRendimentoBruto(), 23.01);
     });
+
+    it('Deve retornar 20.55', function() {
+      const aplicacaoCdb = new Cdb(7.5);
+      aplicacaoCdb.setAplicacaoInicial(100);
+      aplicacaoCdb.setDias(1000);
+      assert.equal(aplicacaoCdb.getRendimentoBruto(), 20.55);
+    });
+
   });
 });
