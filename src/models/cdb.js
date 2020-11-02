@@ -8,11 +8,19 @@ class Cdb {
     }
 
     setDias(number) {
-        this.dias = number;
+			this.dias = number;
+			if(number <= 180)
+				this.setAliquota(22.5);
+			else if(number <= 360)
+				this.setAliquota(20);
+			else if(number <= 720)
+				this.setAliquota(17.5);
+			else
+				this.setAliquota(15);
     }
 
     setAliquota(number) {
-
+			this.aliquota = number;
     }
 
     getRendimentoBruto() {
@@ -20,7 +28,7 @@ class Cdb {
     }
 
     getImpostoDeRenda() {
-        return 3.14;
+        return parseFloat((this.getRendimentoBruto()*(this.aliquota/100)).toFixed(2));
     }
 }
 
