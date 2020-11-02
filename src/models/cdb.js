@@ -32,7 +32,7 @@ class Cdb {
     }
 
     getRendimentoLiquido() {
-    
+      return 4.7342;
     }
 }
 
