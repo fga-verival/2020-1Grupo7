@@ -10,6 +10,13 @@ describe('Rendimento Liquido', function() {
       assert.equal(aplicacaoCdb.getRendimentoLiquido(), 4.7342);
     });
 
+    it('Deve retornar 14.2397', function () {
+      const aplicacaoCdb = new Cdb(9);
+      aplicacaoCdb.setAplicacaoInicial(2500.00);
+      aplicacaoCdb.setDias(700);
+      assert.equal(aplicacaoCdb.getRendimentoLiquido(), 14.2397)
+    });
+
 
   });
 });
