@@ -7,7 +7,6 @@ describe('Imposto de Renda', function() {
       const aplicacaoCdb = new Cdb(8.5);
       aplicacaoCdb.setAplicacaoInicial(1000.00);
       aplicacaoCdb.setDias(60);
-      aplicacaoCdb.setAliquota(22.5)
       assert.equal(aplicacaoCdb.getImpostoDeRenda(), 3.14);
     });
 
@@ -15,7 +14,6 @@ describe('Imposto de Renda', function() {
       const aplicacaoCdb = new Cdb(9.5);
       aplicacaoCdb.setAplicacaoInicial(4200.00);
       aplicacaoCdb.setDias(900);
-      aplicacaoCdb.setAliquota(15.0)
       assert.equal(aplicacaoCdb.getImpostoDeRenda(), 147.58);
     });
 
