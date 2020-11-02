@@ -32,7 +32,7 @@ class Cdb {
     }
 
     getRendimentoLiquido() {
-      return 4.7342;
+        return parseFloat(((((this.getRendimentoBruto() - this.getImpostoDeRenda()) + this.aplicacaoInicial) / this.aplicacaoInicial) * 100) - 100).toFixed(2);
     }
 }
 
