@@ -30,6 +30,10 @@ class Cdb {
     getImpostoDeRenda() {
         return parseFloat((this.getRendimentoBruto()*(this.aliquota/100)).toFixed(2));
     }
+
+    getRendimentoLiquido() {
+    
+    }
 }
 
 module.exports = Cdb;
