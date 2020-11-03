@@ -17,6 +17,12 @@ describe('Rendimento Liquido', function() {
       assert.equal(aplicacaoCdb.getRendimentoLiquido(), 14.24)
     });
 
+    it('Deve retornar 17.47', function () {
+      const aplicacaoCdb = new Cdb(7.5);
+      aplicacaoCdb.setAplicacaoInicial(100.00);
+      aplicacaoCdb.setDias(1000);
+      assert.equal(aplicacaoCdb.getRendimentoLiquido(), 17.47)
+    });
 
   });
 });
