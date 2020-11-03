@@ -17,5 +17,12 @@ describe('Imposto de Renda', function() {
       assert.equal(aplicacaoCdb.getImpostoDeRenda(), 147.58);
     });
 
+    it('Deve retornar 3.08', function() {
+      const aplicacaoCdb = new Cdb(7.5);
+      aplicacaoCdb.setAplicacaoInicial(100.00);
+      aplicacaoCdb.setDias(1000);
+      assert.equal(aplicacaoCdb.getImpostoDeRenda(), 3.08);
+    });
+
   });
 });
